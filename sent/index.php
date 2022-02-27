@@ -20,11 +20,11 @@
 <?php
 $email= $_POST['email'];
 $message= $_POST['message'];
-$to = "ixhafin@gmail.com";
-$subject = "Mail From Shafin's website";
+$to = "youremail@gmail.com";
+$subject = "Mail From your website";
 $txt ="Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: xhafin@gmail.com" . "\r\n" .
-"CC: ixhafin@gmail.com";
+$headers = "From: youremail@gmail.com" . "\r\n" .
+"CC: youremail@gmail.com";
 if($message!=NULL){
     mail($to,$subject,$txt,$headers);
 }
@@ -36,7 +36,7 @@ echo '<script>
   showConfirmButton: false,
   timer: 1500   
 }).then(function() {
-    window.location = "http://shafin.asvoid.com/";
+    window.location = "/";
 });
 </script>';
   
