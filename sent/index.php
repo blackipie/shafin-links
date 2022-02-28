@@ -19,12 +19,13 @@
 <body style="font-family: 'Josefin Sans', sans-serif !important ;background: rgb(97, 95, 233)">
 <?php
 $email= $_POST['email'];
+$rcv= $_POST['rcv'];
 $message= $_POST['message'];
-$to = "youremail@gmail.com";
+$to = $rcv;
 $subject = "Mail From your website";
 $txt ="Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: youremail@gmail.com" . "\r\n" .
-"CC: youremail@gmail.com";
+$headers = "From: no-reply@gmail.com" . "\r\n" .
+"CC: no-reply@gmail.com";
 if($message!=NULL){
     mail($to,$subject,$txt,$headers);
 }
